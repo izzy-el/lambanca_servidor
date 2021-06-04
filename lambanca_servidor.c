@@ -42,7 +42,7 @@ int main() {
 
     for(int i = 0; i < matrixSize; i++) {
         for(int j = 0; j < matrixSize; j++) {
-            printf("%d ", newMatrix[i][j]);
+            printf("%d\t", newMatrix[i][j]);
         }
         printf("\n");
     }
@@ -65,7 +65,7 @@ int main() {
         for(int j = 0; j < matrixSize; j++) {
             temp += newMatrix[j][i];
         }
-        temp /= 3;
+        temp /= matrixSize;
         printf("%.2f\t", temp);
     }
     printf("\n");
@@ -80,7 +80,7 @@ int main() {
             temp += newMatrix[j][i];
         }
 
-        temp /= 3;
+        temp /= matrixSize;
         for(int j = 0; j < matrixSize; j++) {
             tempDp += pow((newMatrix[j][i] - temp), 2);
         }
