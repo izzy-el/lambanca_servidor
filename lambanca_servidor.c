@@ -17,12 +17,6 @@ int main() {
     for(int i = 0; i < matrixSize; i++) {
         for(int j = 0; j < matrixSize; j++) {
             scanf("%d", &matrix[i][j]);
-        }
-    }
-
-    //multiplying each value by the factor the user chose
-    for(int i = 0; i < matrixSize; i++) {
-        for(int j = 0; j < matrixSize; j++) {
             matrix[i][j] *= correction;
         }
     }
