@@ -12,6 +12,8 @@ int main() {
     int matrix[matrixSize][matrixSize];
     int newMatrix[matrixSize][matrixSize]; //corrected matrix
     int matrixPath[matrixSize][matrixSize];
+    float somas[matrixSize];
+    float medias[matrixSize];
 
     //getting the user's input for the matrix
     for(int i = 0; i < matrixSize; i++) {
@@ -41,26 +43,27 @@ int main() {
         printf("\n");
     }
 
-    //getting the sum of each column
-    printf("Somas::");
+    //getting the sum and the average of each column
+    float temp;
     for(int i = 0; i < matrixSize; i++) {
-        float temp = 0;
+        temp = 0;
         for(int j = 0; j < matrixSize; j++) {
             temp += newMatrix[j][i];
         }
-        printf("%.2f\t", temp);
+        somas[i] = temp;
+        medias[i] = temp / matrixSize;
+
+    }
+
+    printf("Somas::");
+    for(int i = 0; i < matrixSize; i++) {
+        printf("%.2f\t", somas[i]);
     }
     printf("\n");
 
-    //getting the average of each column
-    printf("Media::");
+    printf("Medias::");
     for(int i = 0; i < matrixSize; i++) {
-        float temp = 0;
-        for(int j = 0; j < matrixSize; j++) {
-            temp += newMatrix[j][i];
-        }
-        temp /= matrixSize;
-        printf("%.2f\t", temp);
+        printf("%.2f\t", medias[i]);
     }
     printf("\n");
 
