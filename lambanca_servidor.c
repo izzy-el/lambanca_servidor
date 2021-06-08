@@ -1,3 +1,6 @@
+//@author: Izael Souza
+//@school: Unicamp
+
 #include <stdio.h>
 #include <math.h>
 
